@@ -1,0 +1,11 @@
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\bin\Release\XMLUtility.exe.config
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\bin\Release\XMLUtility.exe
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\bin\Release\XMLUtility.pdb
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.csproj.AssemblyReference.cache
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.csproj.SuggestedBindingRedirects.cache
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.UIForm.resources
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.Properties.Resources.resources
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.csproj.GenerateResource.cache
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.csproj.CoreCompileInputs.cache
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.exe
+C:\Users\38099\Desktop\Data\Study\2_year\XMLUtility\XMLUtility\obj\Release\XMLUtility.pdb
