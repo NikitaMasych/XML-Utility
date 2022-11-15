@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,26 +8,43 @@ using System.Xml;
 
 namespace XMLUtility
 {
-    internal class DOMTraversal
+    internal class DOMTraversal : ISelectionStrategy
     {
-        public static List<XmlNode> FetchAttributes(string XMLFilepath)
+        private const int personLevel = 1;
+        private string separatorBetweenRecords = new string('-', 74);
+        public string FetchCurrentValues(string XMLFilepath, 
+            HashSet<string> filters) 
         {
+
             var xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(XMLFilepath);
-            var xmlNodes = TraverseNodes(xmlDoc);
-            return xmlNodes;
+            xmlDoc.Load(XMLFilepath);
+            return TraverseNodes(xmlDoc, filters);
         }
-        private static List<XmlNode> TraverseNodes(XmlDocument xmlDoc)
+        private string TraverseNodes(XmlDocument xmlDoc, HashSet<string> filters)
         {
-            var xmlNodes = new List<XmlNode>();
+            var sb = new StringBuilder();
             const int level = 0;
-            TraverseRecusively(xmlDoc.DocumentElement, level, xmlNodes);
-            return xmlNodes;
+            TraverseRecusively(xmlDoc.DocumentElement, level, filters, sb);
+            return sb.ToString();
         }
-        private static void TraverseRecusively(XmlNode node, 
-            int level, List<XmlNode> xmlNodes)
+        private void TraverseRecusively(XmlNode node, int level, 
+            HashSet<string> filters, StringBuilder sb)
         {
-            xmlNodes.Add(node); 
+            foreach (XmlAttribute attribute in node.Attributes)
+            {
+                if (filters.Contains(attribute.Name))
+                {
+                    sb.AppendLine(
+                        string.Format("{0}: {1}",
+                attribute.Name, attribute.Value));
+                }
+            }
+            foreach (XmlNode childNode in node.ChildNodes)
+            {
+                TraverseRecusively(childNode, level + 1, filters, sb);
+            }
+            if (level == personLevel)
+                sb.AppendLine(separatorBetweenRecords);
         }
     }
 }

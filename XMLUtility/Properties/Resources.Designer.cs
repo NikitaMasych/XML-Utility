@@ -63,19 +63,9 @@ namespace XMLUtility.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gradient {
+        internal static System.Drawing.Bitmap XMLUtilities {
             get {
-                object obj = ResourceManager.GetObject("gradient", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gradient_linear_blue_purple_1920x1080_c2_00bfff_9400d3_a_90_f_14 {
-            get {
-                object obj = ResourceManager.GetObject("gradient-linear-blue-purple-1920x1080-c2-00bfff-9400d3-a-90-f-14", resourceCulture);
+                object obj = ResourceManager.GetObject("XMLUtilities", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

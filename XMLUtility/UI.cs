@@ -37,8 +37,7 @@ namespace XMLUtility
                MessageBox.Show(ex.Message);
             }
         }
-
-        private void openInBrowserButton_Click(object sender, EventArgs e)
+        private void OpenInBrowserButton_Click(object sender, EventArgs e)
         {
             HandleOpeningInBrowser();
         }
@@ -57,6 +56,54 @@ namespace XMLUtility
             {
                 MessageBox.Show("You need to conduct transformation first");
             }
+        }
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            filteredDataTextBox.Text = 
+                GetCurrentStrategy().
+                FetchCurrentValues(
+                    Environment.GetEnvironmentVariable("XML_FILEPATH"),
+                    GatherEnabledFilters()
+                );
+        }
+        private HashSet<string> GatherEnabledFilters()
+        {
+            var enabledFilters = new HashSet<string>();
+            if (firstNameCheckbox.Checked) 
+                enabledFilters.Add("FIRSTNAME");
+            if (surnameCheckBox.Checked)
+                enabledFilters.Add("SURNAME");
+            if (lastNameCheckBox.Checked) 
+                enabledFilters.Add("LASTNAME");
+            
+            if (workplaceUniversityCheckBox.Checked) 
+                enabledFilters.Add("WUNIVERSITY");
+            if (workplaceFacultyCheckbox.Checked) 
+                enabledFilters.Add("WFACULTY");
+            if (workplaceDepartmentCheckBox.Checked)
+                enabledFilters.Add("WDEPARTMENT");
+            
+            if (basicCheckBox.Checked) enabledFilters.Add("BSCHOOL");
+            if (graduateCheckBox.Checked) {
+                enabledFilters.Add("GUNIVERSITY");
+                enabledFilters.Add("GFACULTY");
+            }
+            if (postgraduateCheckBox.Checked) {
+                enabledFilters.Add("PUNIVERSITY");
+                enabledFilters.Add("PFACULTY");
+            }
+            if (doctoralCheckBox.Checked) {
+                enabledFilters.Add("DUNIVERSITY");
+                enabledFilters.Add("DFACULTY");
+            }
+            return enabledFilters;
+        }
+        private ISelectionStrategy GetCurrentStrategy()
+        {
+            if (DOMRadioButton.Checked){
+                return new DOMTraversal();
+            }
+            return new SAXTraversal();
         }
     }
 }
