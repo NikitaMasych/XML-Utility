@@ -13,6 +13,7 @@ namespace XMLUtility
 {
     public partial class UIForm : Form
     {
+        private Point mouseDownCredentialsPanelLocation;
         public UIForm()
         {
             InitializeComponent();
@@ -104,6 +105,38 @@ namespace XMLUtility
                 return new DOMTraversal();
             }
             return new SAXTraversal();
+        }
+        private void DocumentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string html =
+                    Environment.GetEnvironmentVariable("DOCUMENTATION_URL");
+            System.Diagnostics.Process.Start(html);
+        }
+        private void ShowCredentials_Click(object sender, EventArgs e)
+        {
+            credentialsPanel.Visible = true;
+        }
+        private void HideCredentials_Click(object sender, EventArgs e)
+        {
+            credentialsPanel.Visible = false;
+        }
+        private void MoveCredentialsPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+
+                mouseDownCredentialsPanelLocation = e.Location;
+            }
+        }
+        private void MoveCredentialsPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                credentialsPanel.Left = e.X + credentialsPanel.Left -
+                    mouseDownCredentialsPanelLocation.X;
+                credentialsPanel.Top = e.Y + credentialsPanel.Top -
+                    mouseDownCredentialsPanelLocation.Y;
+            }
         }
     }
 }

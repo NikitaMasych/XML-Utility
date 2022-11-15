@@ -11,7 +11,7 @@ namespace XMLUtility
     internal class DOMTraversal : ISelectionStrategy
     {
         private const int personLevel = 1;
-        private string separatorBetweenRecords = new string('-', 74);
+        private string separatorBetweenRecords = new string('-', 63);
         public string FetchCurrentValues(string XMLFilepath, 
             HashSet<string> filters) 
         {

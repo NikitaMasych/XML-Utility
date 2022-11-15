@@ -89,7 +89,10 @@
     <None Include="Resources\XMLUtilities.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\XMLUtilities1.png" />
+    <None Include="Resources\Documentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info-1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

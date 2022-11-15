@@ -49,6 +49,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.filteredDataTextBox = new System.Windows.Forms.TextBox();
             this.selectButton = new System.Windows.Forms.Button();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.credentialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.credentialsPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.credentialsTextBox = new System.Windows.Forms.TextBox();
+            this.menuStrip.SuspendLayout();
+            this.credentialsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // transformButton
@@ -307,8 +316,8 @@
             // 
             // filteredDataTextBox
             // 
-            this.filteredDataTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.filteredDataTextBox.Location = new System.Drawing.Point(405, 21);
+            this.filteredDataTextBox.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filteredDataTextBox.Location = new System.Drawing.Point(405, 55);
             this.filteredDataTextBox.Multiline = true;
             this.filteredDataTextBox.Name = "filteredDataTextBox";
             this.filteredDataTextBox.ReadOnly = true;
@@ -332,6 +341,86 @@
             this.selectButton.UseVisualStyleBackColor = false;
             this.selectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
+            // menuStrip
+            // 
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.menuStrip.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.infoToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(904, 33);
+            this.menuStrip.TabIndex = 19;
+            this.menuStrip.Text = "menuStrip1";
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.documentationToolStripMenuItem,
+            this.credentialsToolStripMenuItem});
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(56, 29);
+            this.infoToolStripMenuItem.Text = "Info";
+            // 
+            // documentationToolStripMenuItem
+            // 
+            this.documentationToolStripMenuItem.Image = global::XMLUtility.Properties.Resources.Documentation;
+            this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.documentationToolStripMenuItem.Text = "Documentation";
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItem_Click);
+            // 
+            // credentialsToolStripMenuItem
+            // 
+            this.credentialsToolStripMenuItem.Image = global::XMLUtility.Properties.Resources.Info_1;
+            this.credentialsToolStripMenuItem.Name = "credentialsToolStripMenuItem";
+            this.credentialsToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.credentialsToolStripMenuItem.Text = "Credentials";
+            this.credentialsToolStripMenuItem.Click += new System.EventHandler(this.ShowCredentials_Click);
+            // 
+            // credentialsPanel
+            // 
+            this.credentialsPanel.BackColor = System.Drawing.Color.Black;
+            this.credentialsPanel.Controls.Add(this.button1);
+            this.credentialsPanel.Controls.Add(this.credentialsTextBox);
+            this.credentialsPanel.Location = new System.Drawing.Point(295, 106);
+            this.credentialsPanel.Name = "credentialsPanel";
+            this.credentialsPanel.Size = new System.Drawing.Size(327, 202);
+            this.credentialsPanel.TabIndex = 20;
+            this.credentialsPanel.Visible = false;
+            this.credentialsPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveCredentialsPanel_MouseDown);
+            this.credentialsPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveCredentialsPanel_MouseMove);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(140, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(36, 26);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.HideCredentials_Click);
+            // 
+            // credentialsTextBox
+            // 
+            this.credentialsTextBox.BackColor = System.Drawing.Color.Black;
+            this.credentialsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.credentialsTextBox.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.credentialsTextBox.ForeColor = System.Drawing.Color.White;
+            this.credentialsTextBox.Location = new System.Drawing.Point(3, 36);
+            this.credentialsTextBox.Multiline = true;
+            this.credentialsTextBox.Name = "credentialsTextBox";
+            this.credentialsTextBox.ReadOnly = true;
+            this.credentialsTextBox.Size = new System.Drawing.Size(321, 166);
+            this.credentialsTextBox.TabIndex = 0;
+            this.credentialsTextBox.Text = "XML Utility\r\nMade by Nikita Masych\r\nYou may contact developer using\r\nTelegram: @J" +
+    "ust_law_abiding_citizen\r\nEmail: nikitamasich152@gmail.com\r\nDistributed under MIT" +
+    " License 2022";
+            this.credentialsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // UIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -339,6 +428,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::XMLUtility.Properties.Resources.XMLUtilities;
             this.ClientSize = new System.Drawing.Size(904, 688);
+            this.Controls.Add(this.credentialsPanel);
             this.Controls.Add(this.selectButton);
             this.Controls.Add(this.filteredDataTextBox);
             this.Controls.Add(this.label1);
@@ -359,11 +449,17 @@
             this.Controls.Add(this.firstNameCheckbox);
             this.Controls.Add(this.openInBrowserButton);
             this.Controls.Add(this.transformButton);
+            this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "UIForm";
             this.Text = "XML Utility";
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.credentialsPanel.ResumeLayout(false);
+            this.credentialsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,6 +487,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox filteredDataTextBox;
         private System.Windows.Forms.Button selectButton;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem credentialsToolStripMenuItem;
+        private System.Windows.Forms.Panel credentialsPanel;
+        private System.Windows.Forms.TextBox credentialsTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

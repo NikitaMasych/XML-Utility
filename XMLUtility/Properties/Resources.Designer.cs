@@ -63,6 +63,26 @@ namespace XMLUtility.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Documentation {
+            get {
+                object obj = ResourceManager.GetObject("Documentation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Info_1 {
+            get {
+                object obj = ResourceManager.GetObject("Info-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap XMLUtilities {
             get {
                 object obj = ResourceManager.GetObject("XMLUtilities", resourceCulture);
