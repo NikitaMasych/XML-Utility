@@ -278,14 +278,12 @@
             // 
             this.DOMRadioButton.AutoSize = true;
             this.DOMRadioButton.BackColor = System.Drawing.Color.Transparent;
-            this.DOMRadioButton.Checked = true;
             this.DOMRadioButton.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DOMRadioButton.ForeColor = System.Drawing.Color.White;
             this.DOMRadioButton.Location = new System.Drawing.Point(676, 608);
             this.DOMRadioButton.Name = "DOMRadioButton";
             this.DOMRadioButton.Size = new System.Drawing.Size(82, 34);
             this.DOMRadioButton.TabIndex = 14;
-            this.DOMRadioButton.TabStop = true;
             this.DOMRadioButton.Text = "DOM";
             this.DOMRadioButton.UseVisualStyleBackColor = false;
             // 
@@ -293,12 +291,14 @@
             // 
             this.SAXRadioButton.AutoSize = true;
             this.SAXRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.SAXRadioButton.Checked = true;
             this.SAXRadioButton.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SAXRadioButton.ForeColor = System.Drawing.Color.White;
             this.SAXRadioButton.Location = new System.Drawing.Point(804, 608);
             this.SAXRadioButton.Name = "SAXRadioButton";
             this.SAXRadioButton.Size = new System.Drawing.Size(75, 34);
             this.SAXRadioButton.TabIndex = 15;
+            this.SAXRadioButton.TabStop = true;
             this.SAXRadioButton.Text = "SAX";
             this.SAXRadioButton.UseVisualStyleBackColor = false;
             // 
@@ -367,7 +367,7 @@
             // 
             this.documentationToolStripMenuItem.Image = global::XMLUtility.Properties.Resources.Documentation;
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
             this.documentationToolStripMenuItem.Text = "Documentation";
             this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItem_Click);
             // 
@@ -375,7 +375,7 @@
             // 
             this.credentialsToolStripMenuItem.Image = global::XMLUtility.Properties.Resources.Info_1;
             this.credentialsToolStripMenuItem.Name = "credentialsToolStripMenuItem";
-            this.credentialsToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.credentialsToolStripMenuItem.Size = new System.Drawing.Size(220, 30);
             this.credentialsToolStripMenuItem.Text = "Credentials";
             this.credentialsToolStripMenuItem.Click += new System.EventHandler(this.ShowCredentials_Click);
             // 

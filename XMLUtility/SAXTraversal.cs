@@ -9,6 +9,7 @@ namespace XMLUtility
 {
     internal class SAXTraversal : ISelectionStrategy
     {
+        private string separatorBetweenRecords = new string('-', 63);
         public string FetchCurrentValues(string XMLFilepath,
             HashSet<string> filters)
         {
@@ -16,12 +17,20 @@ namespace XMLUtility
             var sb = new StringBuilder();
             while (xmlReader.Read())
             {
+                if (xmlReader.Name == "person")
+                {
+                    sb.AppendLine(separatorBetweenRecords);
+                }
                 if (xmlReader.HasAttributes)
                 {
                     while (xmlReader.MoveToNextAttribute())
                     {
-                        sb.AppendLine(string.Format(
-                            "{0}:{1}",xmlReader.Name, xmlReader.Value));
+                        if (filters.Contains(xmlReader.Name))
+                        {
+                            sb.AppendLine(
+                                string.Format("{0}: {1}",
+                        xmlReader.Name, xmlReader.Value));
+                        }
                     }
                 }
             }
