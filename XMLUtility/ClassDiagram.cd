@@ -31,7 +31,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="XMLUtility.UIForm">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="7.5" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -41,7 +41,7 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="XMLUtility.ISelectionStrategy">
-    <Position X="3" Y="2.5" Width="1.5" />
+    <Position X="2.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contracts.cs</FileName>

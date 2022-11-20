@@ -15,7 +15,6 @@ namespace XMLUtility
         public string FetchCurrentValues(string XMLFilepath, 
             HashSet<string> filters) 
         {
-
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(XMLFilepath);
             return TraverseNodes(xmlDoc, filters);
