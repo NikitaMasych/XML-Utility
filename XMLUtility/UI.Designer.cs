@@ -56,6 +56,7 @@
             this.credentialsPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.credentialsTextBox = new System.Windows.Forms.TextBox();
+            this.clearFiltersButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.credentialsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -384,7 +385,7 @@
             this.credentialsPanel.BackColor = System.Drawing.Color.Black;
             this.credentialsPanel.Controls.Add(this.button1);
             this.credentialsPanel.Controls.Add(this.credentialsTextBox);
-            this.credentialsPanel.Location = new System.Drawing.Point(295, 106);
+            this.credentialsPanel.Location = new System.Drawing.Point(295, 173);
             this.credentialsPanel.Name = "credentialsPanel";
             this.credentialsPanel.Size = new System.Drawing.Size(327, 202);
             this.credentialsPanel.TabIndex = 20;
@@ -421,6 +422,22 @@
     " License 2022";
             this.credentialsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // clearFiltersButton
+            // 
+            this.clearFiltersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.clearFiltersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearFiltersButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.clearFiltersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearFiltersButton.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearFiltersButton.ForeColor = System.Drawing.Color.White;
+            this.clearFiltersButton.Location = new System.Drawing.Point(224, 470);
+            this.clearFiltersButton.Name = "clearFiltersButton";
+            this.clearFiltersButton.Size = new System.Drawing.Size(117, 45);
+            this.clearFiltersButton.TabIndex = 21;
+            this.clearFiltersButton.Text = "Clear Filters";
+            this.clearFiltersButton.UseVisualStyleBackColor = false;
+            this.clearFiltersButton.Click += new System.EventHandler(this.ClearFiltersButton_Click);
+            // 
             // UIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -428,6 +445,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::XMLUtility.Properties.Resources.XMLUtilities;
             this.ClientSize = new System.Drawing.Size(904, 688);
+            this.Controls.Add(this.clearFiltersButton);
             this.Controls.Add(this.credentialsPanel);
             this.Controls.Add(this.selectButton);
             this.Controls.Add(this.filteredDataTextBox);
@@ -494,6 +512,7 @@
         private System.Windows.Forms.Panel credentialsPanel;
         private System.Windows.Forms.TextBox credentialsTextBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button clearFiltersButton;
     }
 }
 

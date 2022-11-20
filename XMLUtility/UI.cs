@@ -138,5 +138,20 @@ namespace XMLUtility
                     mouseDownCredentialsPanelLocation.Y;
             }
         }
+        private void ClearFiltersButton_Click(object sender, EventArgs e)
+        {
+            firstNameCheckbox.Checked = false;
+            surnameCheckBox.Checked = false;
+            lastNameCheckBox.Checked = false;
+
+            workplaceUniversityCheckBox.Checked = false;
+            workplaceFacultyCheckbox.Checked = false;
+            workplaceDepartmentCheckBox.Checked = false;
+
+            basicCheckBox.Checked = false;
+            graduateCheckBox.Checked = false;
+            postgraduateCheckBox.Checked = false;
+            doctoralCheckBox.Checked = false;
+        }
     }
 }
