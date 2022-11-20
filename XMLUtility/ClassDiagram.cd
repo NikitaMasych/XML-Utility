@@ -31,12 +31,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="XMLUtility.UIForm">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AIIhAAAARCCCAxkJFACAAAA6KIAYIhAAAAACZBACgQA=</HashCode>
+      <HashCode>AIIhAAAARCCCAxkJFACAAAA6KIUYIhAAAAACZBACgQA=</HashCode>
       <FileName>UI.cs</FileName>
     </TypeIdentifier>
   </Class>
